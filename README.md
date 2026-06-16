@@ -1,4 +1,4 @@
-# os-info-e87bb8
+# os-info-3d5ee9
 
 A Rust os-info utility.
 

